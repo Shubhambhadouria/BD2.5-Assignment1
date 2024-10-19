@@ -261,7 +261,7 @@ app.get('/products/sort/price-low-to-high', (req, res) => {
 });
 
 function filterByRam(product, ram) {
-  return product.ram > ram;
+  return product.ram === ram;
 }
 
 app.get('/products/filter/ram', (req, res) => {
@@ -271,7 +271,7 @@ app.get('/products/filter/ram', (req, res) => {
 });
 
 function filterByRom(product, rom) {
-  return product.rom > rom;
+  return product.rom === rom;
 }
 
 app.get('/products/filter/rom', (req, res) => {

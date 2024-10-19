@@ -265,7 +265,7 @@ function filterByRam(product, ram) {
 }
 
 app.get('/products/filter/ram', (req, res) => {
-  let ram = req.query.ram;
+  let ram = parseInt(req.query.ram);
   let sortedProducts = products.filter((data) => filterByRam(data, ram));
   res.json({ products: sortedProducts });
 });
@@ -275,7 +275,7 @@ function filterByRom(product, rom) {
 }
 
 app.get('/products/filter/rom', (req, res) => {
-  let rom = req.query.rom;
+  let rom = parseInt(req.query.rom);
   let sortedProducts = products.filter((data) => filterByRom(data, rom));
   res.json({ products: sortedProducts });
 });
